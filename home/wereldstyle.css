@@ -7,21 +7,8 @@ html {
   }
 
 #wereldOne {
-    margin-left: -40px;
-    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 56px;
     position: relative;
 }
 
-#wereldTwo {
-    margin-left: 500px;
-    margin-right: 0px;
-    margin-top: -430px;
-    position: relative;
-}
-
-#wereldThree {
-    margin-left: 945px;
-    margin-right: 0px;
-    margin-top: -820px;
-    position: relative;
-}
