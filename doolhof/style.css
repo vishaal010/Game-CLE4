@@ -1,0 +1,104 @@
+body {
+    font-family: Calibri;
+    transition: 0.5s ease;
+    text-align: center;
+  }
+
+body.success  {
+    background-color: #b7f0b7;
+  }
+
+.game-container {
+    margin: 0px auto;
+  }
+
+#map-and-controls {
+    display: flex;
+    justify-content: center;
+  }
+
+p {
+    margin: 10px 0px;
+    padding: 0px;
+  }
+
+.game-map {
+    position: relative;
+    margin: 250px auto;
+    transform: scale(2.50);
+  }
+
+  div.layer, 
+  div.layer div {
+    position: absolute;
+  }
+
+#tiles div {
+    border: 1px solid black;
+  }
+
+.default .floor {
+    background-color: #cf8b54;
+  }
+
+.default .wall {
+    background-image: url("struik.jpg");
+    background-size: 30px;
+  }
+
+.player, 
+.goal,
+.goal2,
+.goal3,
+.chaser {
+    transform-origin: center;
+    transform:scale(0.85);
+  }
+
+.player {
+    background-image: url("kathoofd.png");
+    background-size: 35px;
+    background-position: center;
+    transition: left 0.2s linear, top 0.2s linear;
+  }
+  
+.goal {
+    background-image: url("E.png");
+    background-size: 30px;
+    background-position: center;
+  }
+
+.goal2 {
+    background-image: url("B.png");
+    background-size: 30px;
+    background-position: center;
+  }
+
+.goal3 {
+    background-image: url("D.png");
+    background-size: 30px;
+    background-position: center;
+  }
+
+.chaser {
+    background-image: url("hondhoofd.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#success-msg {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    padding: 5px 5px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    width: calc(100% - 8px);
+  }
+
+body.success #success-msg {
+    opacity: 1;
+    transition: opacity 0.2 ease;
+  }
+

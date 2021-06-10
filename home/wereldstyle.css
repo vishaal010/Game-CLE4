@@ -1,0 +1,27 @@
+html { 
+    background: url(wereld.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+#wereldOne {
+    margin-left: -40px;
+    margin-right: 0px;
+    position: relative;
+}
+
+#wereldTwo {
+    margin-left: 500px;
+    margin-right: 0px;
+    margin-top: -430px;
+    position: relative;
+}
+
+#wereldThree {
+    margin-left: 945px;
+    margin-right: 0px;
+    margin-top: -820px;
+    position: relative;
+}
