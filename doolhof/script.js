@@ -4,7 +4,6 @@ let sound2 = new Audio('B.mp3');
 let sound3 = new Audio('D.mp3');
 let sound4 = new Audio('BED.mp3')
 
-
 levels[0] = {
   map:[
      [1,1,0,0,1,0,1],
@@ -240,22 +239,14 @@ function sleep(ms) {
 //moving chaser behind the player
 
  Game.prototype.moveChaser = async function(event) {
+      for (let i = 0; i < 5; i++)
+{
+   this.chaser.y--
+   await sleep(2000)
+   console.log(this.chaser.y)
+   
+}
 
-   let counter = 0
-
-
-   if (counter == 0) {
-      this.moveUpEnemy();
-  }
-  else if (counter == 1) {
-      this.moveRightEnemy();
-  }
-  else if (counter == 2) {
-      this.moveLeftEnemy();
-  }
-  else if (counter == 3) {
-      this.moveDownEnemy();
-  }
 
 }
 /*
@@ -305,13 +296,12 @@ Game.prototype.checkGoal3 = function() {
     if (this.player.y == this.goal3.y && 
         this.player.x == this.goal3.x) {
         body.className = 'success';
-         sound3.play();
-         document.getElementById('goal3').style.display = 'none';     
-         redirectURL();             
+        sound3.loop = false;
+        sound3.play();
+        document.getElementById('goal3').style.display = 'none';
 
-        }
-      
-     
+      redirectURL();             
+     }
      else {
         body.className = '';
      }
@@ -321,23 +311,18 @@ Game.prototype.checkGoal3 = function() {
  *  Listens for keyboard input.
  */
 Game.prototype.keyboardListener = function() {
-
-
-   
+  
   document.addEventListener('keydown', event => {
       
-
-      this.moveChaser(event);
-
       this.movePlayer(event);
     
       this.checkGoal();
-     
+
       this.checkGoal2();
 
       this.checkGoal3();
 
-      
+      this.checkChaser(event);
   });
 }
 
@@ -385,7 +370,6 @@ Game.prototype.moveLeft = function() {
    this.updateHoriz();
 }
 Game.prototype.moveUp = function() {    
-
   
    if (this.player.y == 0) {
         return;
@@ -404,16 +388,12 @@ Game.prototype.moveUp = function() {
  *  Moves the player right.
  */
 Game.prototype.moveRight = function() {   
-
-   // Niet uit de map gaan
   
    if (this.player.x == this.map[this.player.y].length - 1) {
         return;
    }
-
    let nextTile = this.map[this.player.y][this.player.x + 1];
         
-   // Niet in het groene veld gaan
    if (nextTile == 1) {
         return;
    }
@@ -441,93 +421,6 @@ Game.prototype.moveDown = function() {
    this.updateVert();
 }
 
-Game.prototype.moveUpEnemy = async function() {   
-
-  
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-
-   console.log('testmoveuo')
-   await sleep(1000)
-   let nextTile = this.map[this.chaser.y-1][this.chaser.x];
-
-
-
-  
-   if (nextTile == 1) {
-        return;
-   }
-    
-   this.chaser.y +=2;
-   
-   this.updateVertEnemy();
-
-   counter = 1;
-
-   console.log(counter)
-}
-
-
-
-Game.prototype.moveRightEnemy = function() {   
-  
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y][this.chaser.x + 1];
-  
-   if (nextTile == 1) {
-        return;
-   }
-    
-   this.chaser.y +=1;
-   
-   this.updateHorizEnemy();
-
-   counter = 2;
-
-}
-
-
-Game.prototype.moveLeftEnemy = function() {   
-  
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y][this.chaser.x - 1];
-  
-   if (nextTile == 1) {
-        return;
-   }
-    
-   counter = 3;
-
-   this.chaser.y +=1;
-   
-   this.updateHorizEnemy();
-}
-
-
-
-Game.prototype.moveDownEnemy = function() {   
-  
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y+1][this.chaser.x];
-  
-   if (nextTile == 1) {
-        return;
-   }
-    
-   this.chaser.y +=1;
-   
-   this.updateVertEnemy();
-}
-
-
-
 
 /* 
  * Update helpers for player movement.
@@ -539,15 +432,6 @@ Game.prototype.updateHoriz = function() {
 
 Game.prototype.updateVert = function() {
    this.player.el.style.top = this.player.y * this.tileDim+ 'px'; };
-
-
-Game.prototype.updateHorizEnemy = function() {      
-      this.chaser.el.style.left = this.chaser.x * this.tileDim+ 'px';    
-   };
-   
-Game.prototype.updateVertEnemy = function() {
-      this.chaser.el.style.top = this.chaser.y * this.tileDim+ 'px'; };
-   
 
 /* 
  * Initialization.
