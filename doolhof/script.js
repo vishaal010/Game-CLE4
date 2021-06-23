@@ -104,8 +104,6 @@ function Game(id, level) {
   this.goal = {...level.goal};
   this.goal2 = {...level.goal2};
   this.goal3 = {...level.goal3};
-  this.chaser = {...level.chaser};
-
  
 
 
@@ -541,12 +539,12 @@ Game.prototype.updateVert = function() {
    this.player.el.style.top = this.player.y * this.tileDim+ 'px'; };
 
 
-Game.prototype.updateHorizEnemy = function() {      
-      this.chaser.el.style.left = this.chaser.x * this.tileDim+ 'px';    
-   };
+// Game.prototype.updateHorizEnemy = function() {      
+//       this.chaser.el.style.left = this.chaser.x * this.tileDim+ 'px';    
+//    };
    
-Game.prototype.updateVertEnemy = function() {
-      this.chaser.el.style.top = this.chaser.y * this.tileDim+ 'px'; };
+// Game.prototype.updateVertEnemy = function() {
+//       this.chaser.el.style.top = this.chaser.y * this.tileDim+ 'px'; };
    
 
 /* 
