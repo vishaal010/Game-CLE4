@@ -239,25 +239,25 @@ function sleep(ms) {
 
 //moving chaser behind the player
 
- Game.prototype.moveChaser = async function(event) {
+//  Game.prototype.moveChaser = async function(event) {
 
-   let counter = 0
+//    let counter = 0
 
 
-   if (counter == 0) {
-      this.moveUpEnemy();
-  }
-  else if (counter == 1) {
-      this.moveRightEnemy();
-  }
-  else if (counter == 2) {
-      this.moveLeftEnemy();
-  }
-  else if (counter == 3) {
-      this.moveDownEnemy();
-  }
+//    if (counter == 0) {
+//       this.moveUpEnemy();
+//   }
+//   else if (counter == 1) {
+//       this.moveRightEnemy();
+//   }
+//   else if (counter == 2) {
+//       this.moveLeftEnemy();
+//   }
+//   else if (counter == 3) {
+//       this.moveDownEnemy();
+//   }
 
-}
+// }
 /*
  *  Checks for the goal.
  */
@@ -441,32 +441,32 @@ Game.prototype.moveDown = function() {
    this.updateVert();
 }
 
-Game.prototype.moveUpEnemy = async function() {   
+// Game.prototype.moveUpEnemy = async function() {   
 
   
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
+//    if (this.chaser.y == this.map.length - 1) {
+//         return;
+//    }
 
-   console.log('testmoveuo')
-   await sleep(1000)
-   let nextTile = this.map[this.chaser.y-1][this.chaser.x];
+//    console.log('testmoveuo')
+//    await sleep(1000)
+//    let nextTile = this.map[this.chaser.y-1][this.chaser.x];
 
 
 
   
-   if (nextTile == 1) {
-        return;
-   }
+//    if (nextTile == 1) {
+//         return;
+//    }
     
-   this.chaser.y +=2;
+//    this.chaser.y +=2;
    
-   this.updateVertEnemy();
+//    this.updateVertEnemy();
 
-   counter = 1;
+//    counter = 1;
 
-   console.log(counter)
-}
+//    console.log(counter)
+// }
 
 
 
@@ -563,7 +563,7 @@ function init() {
   
    myGame.sizeUp();
 
-   myGame.moveChaser();
+   // myGame.moveChaser();
   
    myGame.placeSprite('goal');
 
