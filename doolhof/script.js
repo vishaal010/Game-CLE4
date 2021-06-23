@@ -470,61 +470,61 @@ Game.prototype.moveDown = function() {
 
 
 
-Game.prototype.moveRightEnemy = function() {   
+// Game.prototype.moveRightEnemy = function() {   
   
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y][this.chaser.x + 1];
+//    if (this.chaser.y == this.map.length - 1) {
+//         return;
+//    }
+//    let nextTile = this.map[this.chaser.y][this.chaser.x + 1];
   
-   if (nextTile == 1) {
-        return;
-   }
+//    if (nextTile == 1) {
+//         return;
+//    }
     
-   this.chaser.y +=1;
+//    this.chaser.y +=1;
    
-   this.updateHorizEnemy();
+//    this.updateHorizEnemy();
 
-   counter = 2;
+//    counter = 2;
 
-}
+// }
 
 
-Game.prototype.moveLeftEnemy = function() {   
+// Game.prototype.moveLeftEnemy = function() {   
   
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y][this.chaser.x - 1];
+//    if (this.chaser.y == this.map.length - 1) {
+//         return;
+//    }
+//    let nextTile = this.map[this.chaser.y][this.chaser.x - 1];
   
-   if (nextTile == 1) {
-        return;
-   }
+//    if (nextTile == 1) {
+//         return;
+//    }
     
-   counter = 3;
+//    counter = 3;
 
-   this.chaser.y +=1;
+//    this.chaser.y +=1;
    
-   this.updateHorizEnemy();
-}
+//    this.updateHorizEnemy();
+// }
 
 
 
-Game.prototype.moveDownEnemy = function() {   
+// Game.prototype.moveDownEnemy = function() {   
   
-   if (this.chaser.y == this.map.length - 1) {
-        return;
-   }
-   let nextTile = this.map[this.chaser.y+1][this.chaser.x];
+//    if (this.chaser.y == this.map.length - 1) {
+//         return;
+//    }
+//    let nextTile = this.map[this.chaser.y+1][this.chaser.x];
   
-   if (nextTile == 1) {
-        return;
-   }
+//    if (nextTile == 1) {
+//         return;
+//    }
     
-   this.chaser.y +=1;
+//    this.chaser.y +=1;
    
-   this.updateVertEnemy();
-}
+//    this.updateVertEnemy();
+// }
 
 
 
