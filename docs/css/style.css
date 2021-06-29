@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-color: #151948;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+startbutton, player, enemy, explosion, planet, star, background, sword, tutorial, deathscreen {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+
+startbutton div {
+    font-size: 3em;
+    padding-top: 26vh;
+    width: 100vw;
+    text-align: center;
+}
+
+endscreen div {
+    font-size: 1em;
+    padding-top: 26vh;
+    width: 100vw;
+    text-align: center;
+}
+
+startbutton button{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-left: calc(50vw - 100px);
+    background-color: rgb(0, 38, 128);
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+endscreen button {
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.5em;
+    margin-top: 10px;
+    margin-left: calc(50vw - 100px);
+    background-color: rgb(0, 38, 128);
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+deathscreen button {
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-left: calc(50vw - 100px);
+    background-color: rgb(0, 38, 128);
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+deathscreen div {
+    font-size: 2em;
+    padding-top: 26vh;
+    width: 100vw;
+    text-align: center;
+}
+
+
+
+tutorial {
+    font-size: 1em;
+    padding-top: 26vh;
+    width: 100vw;
+    text-align: center;
+}
+
+tutorial button {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    background-color: rgb(0, 38, 128);
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+timer {
+font-size: 2em;
+transform: translate(35vw, 36vh);
+margin-bottom: 80px;
+position: relative;
+}
+
+score {
+    font-size: 2em;
+    transform: translate(35vw, 36vh);
+    margin-bottom: 80px;
+    position: relative;
+}
+
+lives{
+    font-size: 2em;
+    transform: translate(65vw, 0vh);
+    margin-bottom: 80px;
+    position: absolute;
+}
+
+
+dust {
+    background-image: url(../images/dust.png);
+    width: 500px;
+    height: 500px;
+    border: solid 1px black;
+    background-size: 100% 100%;
+}
+
+
+
+sword {
+    background-image: url(../images/slash.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+endscreen {
+    font-size: 3em;
+    transform: translate(35vw, 36vh);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+player {
+    background-image: url(../images/player.png);
+    width: 51px;  
+    height: 45px;
+  background-repeat:no-repeat;
+}
+
+enemy {
+    background-image: url(../images/skeleton.png);
+    width: 50px;
+    height: 55px;
+    display:block;
+    background-repeat:no-repeat;
+
+}
+
+background {
+    background-image: url(../images/background.png);
+    width: 100%;
+    height: 100%;
+    background-size: 100vw 100vh;
+    background-repeat: repeat-x;
+}
+
